@@ -1,7 +1,7 @@
 FROM debian:9
 
 RUN apt-get update -yqq && \
-  apt install mysql-server
+  apt install mysql-server -yqq
   
 RUN mkdir -p /data
 RUN mkdir -p /data/mysql
