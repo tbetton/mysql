@@ -10,7 +10,7 @@ RUN /etc/init.d/mysql stop
 COPY conf/my.cnf /etc/mysql/my.cnf
 RUN cp -R -p /var/lib/mysql/* /data/mysql
   
-RUN /etc/init.d/mysql start
+#RUN /etc/init.d/mysql start
   
 VOLUME /data
 
