@@ -4,11 +4,10 @@ RUN apt-get update -yqq && \
   apt install mysql-server -yqq
   
 RUN mkdir -p /data
-RUN mkdir -p /data/mysql
   
 RUN /etc/init.d/mysql stop
 COPY conf/my.cnf /etc/mysql/my.cnf
-RUN cp -R -p /var/lib/mysql/* /data/mysql
+RUN cp -R -p /var/lib/mysql/* /data
   
 #RUN /etc/init.d/mysql start
   
